@@ -1,0 +1,244 @@
+/* ============================================================
+   مجموعه تفریحی فاضل — استایل مشترک ۵ صفحه
+   فونت نمایشی: Lalezar | فونت متن: Vazirmatn
+   ============================================================ */
+:root{
+  --paper:#FBF3E4; --card:#FFFDF6; --paper-2:#F4E9D2;
+  --ink:#2A1D12; --ink-soft:#6B5A45; --line:#E4D3B4;
+  --terra:#D95B29; --terra-dark:#B23F17; --terra-soft:#FBE3D4;
+  --teal:#16655D; --teal-dark:#0E4B45; --teal-soft:#DDEDE7;
+  --gold:#E8A63B; --gold-soft:#FAEBCF;
+  --green:#2F8F5B;
+  --radius:16px;
+  --shadow:0 10px 24px rgba(64,42,18,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--paper);color:var(--ink);font-size:15.5px;line-height:1.9;overflow-x:clip}
+h1,h2,h3,h4{font-family:Lalezar,Vazirmatn,sans-serif;font-weight:400;line-height:1.35;letter-spacing:.2px}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+img{max-width:100%}
+.container{max-width:1120px;margin-inline:auto;padding-inline:20px}
+.ic{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- سربرگ ---------- */
+.site-head{position:sticky;top:0;z-index:50;background:rgba(251,243,228,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:46px;height:46px;flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1.3}
+.brand-name{font-family:Lalezar,Vazirmatn;font-size:21px}
+.brand-sub{font-size:10.5px;color:var(--ink-soft);letter-spacing:.05em}
+.nav{display:flex;gap:4px}
+.nav a{padding:8px 15px;border-radius:99px;text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:14px;transition:.15s}
+.nav a:hover{color:var(--terra);background:var(--terra-soft)}
+.nav a.active{color:#FFF7EC;background:var(--terra)}
+.menu-btn{display:none;width:42px;height:42px;place-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:10px;color:var(--ink)}
+
+/* ---------- آویز شکم‌دار (چراغ‌کافه) ---------- */
+.awning{height:12px;background-color:var(--gold);
+  background-image:
+    radial-gradient(circle at 12px 0,var(--terra) 0 10.5px,transparent 11.5px),
+    radial-gradient(circle at 36px 0,var(--teal) 0 10.5px,transparent 11.5px);
+  background-size:48px 12px;background-repeat:repeat-x}
+.awning.flip{transform:scaleY(-1)}
+
+/* ---------- دکمه‌ها ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:99px;font-weight:700;font-size:14.5px;border:2px solid transparent;text-decoration:none;transition:.2s;cursor:pointer;font-family:inherit}
+.btn-solid{background:var(--terra);color:#FFF7EC}
+.btn-solid:hover{background:var(--terra-dark);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-teal{background:var(--teal);color:#EFFAF6}
+.btn-teal:hover{background:var(--teal-dark);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#3D2806}
+.btn-gold:hover{background:#D89422;transform:translateY(-2px)}
+.btn-cream{background:#FFF3DF;color:var(--teal-dark)}
+.btn-cream:hover{background:#fff;transform:translateY(-2px)}
+
+/* ---------- نشان‌ها و چیپ‌ها ---------- */
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;padding:3px 12px;border-radius:99px}
+.badge i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.badge.live{background:var(--teal-soft);color:var(--teal-dark)}
+.badge.live i{background:var(--green);animation:blink 1.6s infinite}
+.badge.rent{background:var(--gold-soft);color:#8A5B12}
+.badge.rent i{background:var(--gold)}
+.badge.floor{background:var(--paper-2);color:var(--ink-soft)}
+@keyframes blink{50%{opacity:.35}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.chip{background:var(--teal-soft);color:var(--teal-dark);border-radius:99px;padding:5px 14px;font-size:12.5px;font-weight:600}
+.meta-row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ---------- قهرمان صفحه اصلی ---------- */
+.hero{padding:56px 0 48px;
+  background-image:radial-gradient(rgba(42,29,18,.06) 1.5px,transparent 1.6px);background-size:22px 22px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);padding:5px 14px;border-radius:99px}
+.eyebrow.gold{background:var(--gold-soft);color:#7A4E0E}
+.hero h1{font-size:clamp(34px,5vw,52px);margin:14px 0 10px}
+.accent{color:var(--terra)}
+.lead{color:var(--ink-soft);max-width:54ch}
+.hero-cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.hero-facts{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}
+.fact b{font-family:Lalezar,Vazirmatn;font-size:26px;color:var(--terra);display:block;line-height:1.2}
+.fact span{font-size:12px;color:var(--ink-soft)}
+
+/* ---------- قاب عکس + تصویر جایگزین ---------- */
+.photo-frame{position:relative;aspect-ratio:4/3;border-radius:18px;border:6px solid #fff;box-shadow:var(--shadow);transform:rotate(-1.6deg);background:var(--paper-2);overflow:hidden}
+.photo-frame.straight{transform:none;aspect-ratio:16/10;border-width:5px;margin-bottom:8px}
+.fallback{position:absolute;inset:0;width:100%;height:100%}
+img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-cap{position:absolute;bottom:10px;inset-inline-start:10px;background:rgba(42,29,18,.82);color:#FFF3DF;font-size:11.5px;padding:4px 12px;border-radius:99px;z-index:2}
+
+/* ---------- کاوشگر طبقات ---------- */
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.sec-head::after{content:"";flex:1;border-top:3px dotted var(--line)}
+.sec-head h2{font-size:clamp(24px,3.4vw,34px)}
+.sec-sub{color:var(--ink-soft);font-size:14px;margin-bottom:22px}
+.sub-title{font-size:24px;margin:26px 0 14px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:"";width:10px;height:10px;background:var(--terra);border-radius:3px;flex:none}
+.explore-grid{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:30px;align-items:stretch;margin-bottom:26px}
+.building{display:flex;flex-direction:column;border:2.5px solid var(--ink);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+.roof-cap{height:16px;background:repeating-linear-gradient(90deg,var(--terra) 0 26px,var(--teal) 26px 52px)}
+.floor{position:relative;display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;background:var(--card);border:0;border-bottom:2px dashed var(--line);cursor:pointer;text-align:right;font-family:inherit;transition:background .2s}
+.floor:last-of-type{border-bottom:0}
+.floor:hover{background:var(--paper-2)}
+.floor.selected{background:var(--terra-soft)}
+.floor.selected::before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:5px;background:var(--terra);border-radius:0 6px 6px 0}
+.f-tag{font-family:Lalezar,Vazirmatn;font-size:16px;color:var(--teal-dark);background:var(--teal-soft);border-radius:8px;padding:4px 12px;min-width:78px;text-align:center;flex:none;transition:.2s}
+.floor.selected .f-tag{background:var(--terra);color:#FFF7EC}
+.f-info{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:0}
+.f-info b{font-size:14.5px}
+.f-info span{font-size:11.5px;color:var(--ink-soft)}
+.ground-line{height:10px;border-block:2px solid var(--ink);background:repeating-linear-gradient(-45deg,var(--ink) 0 2px,transparent 2px 9px);opacity:.55}
+.floor-detail{position:relative;overflow:hidden;background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px;min-height:250px;box-shadow:var(--shadow)}
+.fd-num{position:absolute;inset-inline-end:14px;top:-10px;font-family:Lalezar,Vazirmatn;font-size:100px;color:rgba(217,91,41,.10);line-height:1.1}
+.fd-badges{display:flex;gap:8px;flex-wrap:wrap}
+.floor-detail h3{font-size:27px}
+.floor-detail p{color:var(--ink-soft)}
+.floor-detail .btn{margin-top:auto;align-self:flex-start}
+
+/* ---------- کارت‌ها ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.cards.two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.shop-card,.unit-card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s}
+.shop-card:hover,.unit-card:hover{transform:translateY(-4px)}
+.ph{position:relative;aspect-ratio:16/9;background:var(--paper-2)}
+.ph-badge{position:absolute;top:12px;inset-inline-start:12px;z-index:2;box-shadow:0 2px 8px rgba(42,29,18,.2)}
+.card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h3{font-size:21px}
+.card-body p{font-size:13.5px;color:var(--ink-soft)}
+.card-foot{margin-top:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:6px}
+.phone-mini{font-weight:800;color:var(--teal-dark);text-decoration:none;font-size:14px}
+.phone-mini:hover{color:var(--terra)}
+
+/* ---------- نوار اجاره ---------- */
+.rent-strip{display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--gold-soft);border:2px dashed var(--gold);border-radius:16px;padding:18px 22px;margin:34px 0 46px;text-decoration:none;color:var(--ink);transition:.2s;flex-wrap:wrap}
+.rent-strip:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.rs-title{font-family:Lalezar,Vazirmatn;font-size:24px;color:#8A5B12;display:block}
+.rent-strip span:last-child{font-size:14px}
+
+/* ---------- صفحات داخلی ---------- */
+.page-head{padding:46px 0 14px}
+.page-head h1{font-size:clamp(30px,4.5vw,44px);margin:10px 0 8px}
+.page-head .lead{margin-bottom:4px}
+.slogan{font-size:clamp(46px,8vw,84px);margin:12px 0 6px}
+.slogan .accent{position:relative}
+.slogan .accent::after{content:"";position:absolute;right:2px;left:2px;bottom:4px;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 8'%3E%3Cpath d='M0 6 Q7 0 14 6 T28 6' fill='none' stroke='%23E8A63B' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;background-size:28px 8px}
+.crumb{font-size:12.5px;color:var(--ink-soft);margin:20px 0 8px}
+.crumb a{text-decoration:none;color:var(--teal)}
+.crumb a:hover{color:var(--terra)}
+.shop-head{margin-bottom:18px}
+.shop-head h1{font-size:clamp(30px,4.5vw,44px);margin:10px 0 4px}
+.shop-lead{color:var(--ink-soft);max-width:62ch}
+.detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start;margin:18px 0 40px}
+.d-main{min-width:0}
+.spec{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:6px 20px;margin-bottom:18px}
+.spec-row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1.5px dotted var(--line);font-size:14px}
+.spec-row:last-child{border:0}
+.spec-row dt{color:var(--ink-soft)}
+.spec-row dd{font-weight:700;text-align:left}
+.contact-card{background:var(--teal);color:#EFFAF6;border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);position:sticky;top:96px;text-align:center}
+.contact-card h3{font-size:23px}
+.cc-sub{font-size:13px;opacity:.85;margin-bottom:6px}
+.phone-big{display:block;font-family:Lalezar,Vazirmatn;font-size:32px;color:#FFF3DF;text-decoration:none;letter-spacing:.04em;margin:4px 0 14px;transition:.15s}
+.phone-big:hover{color:var(--gold)}
+.contact-card .btn{width:100%;justify-content:center}
+.table-wrap{border:1.5px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.menu-table{width:100%;border-collapse:collapse;font-size:14px}
+.menu-table th{background:var(--paper-2);padding:10px 16px;font-size:12.5px;color:var(--ink-soft);text-align:right;font-weight:700}
+.menu-table td{padding:11px 16px;border-top:1.5px dotted var(--line)}
+.menu-table td:last-child{white-space:nowrap;font-weight:700;color:var(--teal-dark)}
+.note{font-size:12px;color:var(--ink-soft);margin-top:10px}
+
+/* ---------- واحد اجاره ---------- */
+.unit-card{scroll-margin-top:96px}
+.unit-spec{display:grid;gap:7px;font-size:13.5px;margin:4px 0}
+.unit-spec>div{display:flex;justify-content:space-between;gap:12px;border-bottom:1.5px dotted var(--line);padding-bottom:7px}
+.unit-spec dt{color:var(--ink-soft)}
+.unit-spec dd{font-weight:700;text-align:left}
+.fit{font-size:13px;color:var(--ink-soft)}
+.fit b{color:var(--teal-dark)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:14px}
+.step{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.step .num{font-family:Lalezar,Vazirmatn;font-size:30px;color:var(--gold);display:block;line-height:1.1}
+.step h4{font-size:18px;margin:2px 0 4px}
+.step p{font-size:13px;color:var(--ink-soft)}
+
+/* ---------- نوار دعوت ---------- */
+.cta-band{background:var(--terra);color:#FFF3DF;border-radius:20px;padding:34px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:46px 0}
+.cta-band h2{font-size:clamp(24px,3.5vw,34px)}
+.cta-band p{opacity:.92;font-size:14px}
+.cta-band .btn{background:#FFF7EC;color:var(--terra-dark)}
+.cta-band .btn:hover{background:#fff;transform:translateY(-2px)}
+.cta-band.teal{background:var(--teal);color:#EFFAF6}
+.cta-band.teal .btn{color:var(--teal-dark)}
+
+/* ---------- پابرگ ---------- */
+.site-foot{background:var(--ink);color:#D8C9AE;margin-top:26px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:30px;padding:42px 0 26px}
+.foot-brand .brand-name{color:#FFF3DF}
+.foot-brand .brand-sub{color:#9C8B70}
+.foot-about{font-size:13px;margin-top:12px;max-width:40ch}
+.site-foot h4{color:#FFF3DF;font-size:18px;margin-bottom:12px}
+.foot-links{list-style:none}
+.foot-links li{margin-bottom:6px}
+.foot-links a{color:#D8C9AE;text-decoration:none;font-size:14px}
+.foot-links a:hover{color:var(--gold)}
+.foot-contact{list-style:none}
+.foot-contact li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:13.5px}
+.foot-contact .ic{margin-top:5px;color:var(--gold)}
+.foot-contact a{color:#FFF3DF;text-decoration:none;font-weight:700}
+.foot-contact a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:14px 0 22px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:#9C8B70}
+
+/* ---------- ظاهر شدن نرم ---------- */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- واکنش‌گرایی ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .detail-grid{grid-template-columns:1fr}
+  .contact-card{position:static}
+}
+@media (max-width:860px){
+  .explore-grid{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  .menu-btn{display:grid}
+  .nav{display:none;position:absolute;top:100%;inset-inline:0;flex-direction:column;background:var(--card);border-bottom:1px solid var(--line);padding:10px 16px 16px;box-shadow:var(--shadow)}
+  .nav.open{display:flex}
+  .nav a{padding:11px 15px}
+}
+@media (max-width:640px){
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero{padding:38px 0 34px}
+  .photo-frame{transform:none}
+}
